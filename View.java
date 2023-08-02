@@ -430,8 +430,7 @@ public class View {
             public void actionPerformed(ActionEvent e)
             {
                 if (controller.restockItems()) {
-                    feedbackLbl.setText("Item stocked successfully");
-                    mainMenu();
+                    popUpWindow("Restock Items", "Item stocked successfully");
                     mainFrame.dispose();
                 }
                 else
@@ -511,8 +510,7 @@ public class View {
             public void actionPerformed(ActionEvent e)
             {
                 if (controller.restockChange()) {
-                    feedbackLbl.setText("Denomination stocked successfully");
-                    mainMenu();
+                    popUpWindow("Restock change", "Denomination stocked successfully");
                     mainFrame.dispose();
                 }
                 else
@@ -592,8 +590,7 @@ public class View {
             public void actionPerformed(ActionEvent e)
             {
                 if (controller.setItemPrice()) {
-                    feedbackLbl.setText("Item price set successfully");
-                    mainMenu();
+                    popUpWindow("Set Item Price", "Item price set successfully");
                     mainFrame.dispose();
                 }
                 else
@@ -686,7 +683,7 @@ public class View {
      * UI for removing a slot from the machine
      */
     private void removeSlot() {
-        JFrame mainFrame = new JFrame("Remove");
+        JFrame mainFrame = new JFrame("Remove Slot");
 
         mainFrame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         mainFrame.setLayout(new FlowLayout());
@@ -712,8 +709,7 @@ public class View {
             public void actionPerformed(ActionEvent e)
             {
                 if (controller.removeSlot()) {
-                    feedbackLbl.setText("Slot deleted successfully");
-                    mainMenu();
+                    popUpWindow("Remove Slot", "Slot deleted successfully");
                     mainFrame.dispose();
                 }
                 else
